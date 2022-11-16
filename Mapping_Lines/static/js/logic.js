@@ -15,7 +15,8 @@ let line = [
   // Create a polyline using the line coordinates and make the line red.
 L.polyline(line, {
     color: "blue",
-    style: "dashed"
+    dashArray: '20, 20',
+    dashOffset: '20'
   }).addTo(map);
 
 // title layer
@@ -27,3 +28,4 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-str
 });
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
+
